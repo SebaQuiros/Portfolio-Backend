@@ -21,5 +21,10 @@ public class SkillsService implements ISkillsService{
     public void postSkillSet(SkillSet skillset) {
         skillsRepo.save(skillset);
     }
+
+    @Override
+    public void deleteSkillSet(Long id) {
+        skillsRepo.deleteById(id);
+    }
     
 }

@@ -9,4 +9,7 @@ public interface ISkillsService {
     public List<SkillSet> getSkills ();
     
     public void postSkillSet (SkillSet skillset);
+    
+    public void deleteSkillSet (Long id);
+    
 }
