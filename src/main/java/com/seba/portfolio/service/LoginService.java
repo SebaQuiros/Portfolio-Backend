@@ -7,18 +7,9 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class LoginService implements ILoginService {
-    
+
     @Autowired
     private LoginRepository loginRepository;
-    
-//    public void addUser(User user){
-//        loginRepository.save(user);
-//    }
-//    
-//    public boolean checkLogin(User user){
-//        User currentUser = loginRepository.findByMailUser(user.getMailUser());
-//        return (currentUser != null)&&(user.getPasswordUser().equals(currentUser.getPasswordUser()));
-//}
 
     @Override
     public void postUser(User user) {
@@ -27,7 +18,7 @@ public class LoginService implements ILoginService {
 
     @Override
     public boolean checkLogin(User user) {
-         User currentUser = loginRepository.findByMailUser(user.getMail());
-         return (currentUser != null)&&(user.getPassword().equals(currentUser.getPassword()));
+        User currentUser = loginRepository.findByMailUser(user.getMail());
+        return (currentUser != null) && (user.getPassword().equals(currentUser.getPassword()));
     }
 }

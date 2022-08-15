@@ -1,5 +1,6 @@
 package com.seba.portfolio.model;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -16,6 +17,9 @@ public class User {
     private Long id;
     private String mail;
     private String password;
+
+    @Column(name = "mailUser")
+    private String mailUser;
 
     public User() {
     }

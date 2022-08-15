@@ -13,15 +13,15 @@ import org.springframework.web.bind.annotation.RestController;
 public class LoginController {
     @Autowired
     private LoginService loginService;
-    
+
     @PostMapping("/addUser")
-    public String addUser(@RequestBody User user){
+    public String addUser(@RequestBody User user) {
         loginService.postUser(user);
         return "Usuario creado.";
     }
 
     @PostMapping("/login")
-    public boolean login(@RequestBody User user){
+    public boolean login(@RequestBody User user) {
         return loginService.checkLogin(user);
     }
 }
