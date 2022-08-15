@@ -18,7 +18,7 @@ public class LoginService implements ILoginService {
 
     @Override
     public boolean checkLogin(User user) {
-        User currentUser = loginRepository.findByMailUser(user.getMail());
-        return (currentUser != null) && (user.getPassword().equals(currentUser.getPassword()));
+        User currentUser = loginRepository.findByMailUser(user.getMailUser());
+        return (currentUser != null) && (user.getPasswordUser().equals(currentUser.getPasswordUser()));
     }
 }
