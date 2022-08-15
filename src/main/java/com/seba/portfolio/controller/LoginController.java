@@ -16,7 +16,7 @@ public class LoginController {
     
     @PostMapping("/addUser")
     public String addUser(@RequestBody User user){
-        loginService.addUser(user);
+        loginService.postUser(user);
         return "Usuario creado.";
     }
 
