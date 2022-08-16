@@ -14,7 +14,7 @@ public class ExperiencesService implements IExperiencesService {
     
     @Override
     public List<Experience> getExperiences() {
-        return experiencesRepo.findAll();
+        return experiencesRepo.findByOrderByIdDesc();
     }
 
     @Override
