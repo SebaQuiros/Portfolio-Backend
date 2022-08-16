@@ -14,7 +14,7 @@ public class EducationsService implements IEducationsService{
 
     @Override
     public List<Education> getEducations() {
-        return educationsRepo.findAll();
+        return educationsRepo.findByOrderByIdDesc();
     }
 
     @Override

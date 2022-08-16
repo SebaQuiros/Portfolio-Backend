@@ -14,7 +14,7 @@ public class AboutService implements IAboutService{
     
     @Override
     public List<About> getAbout() {
-        return aboutRepo.findAll();
+        return aboutRepo.findByOrderByIdDesc();
     }
 
     @Override

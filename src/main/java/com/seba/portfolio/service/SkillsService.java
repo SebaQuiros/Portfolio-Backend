@@ -14,7 +14,7 @@ public class SkillsService implements ISkillsService{
     
     @Override
     public List<SkillSet> getSkills() {
-        return skillsRepo.findAll();
+        return skillsRepo.findByOrderByIdDesc();
     }
 
     @Override

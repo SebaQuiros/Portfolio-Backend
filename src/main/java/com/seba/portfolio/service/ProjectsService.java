@@ -14,7 +14,7 @@ public class ProjectsService implements IProjectsService {
     
     @Override
     public List<Project> getProjects() {
-        return projectsRepo.findAll();
+        return projectsRepo.findByOrderByIdDesc();
     }
 
     @Override
